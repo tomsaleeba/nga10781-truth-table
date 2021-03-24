@@ -6,6 +6,9 @@ the app can be in. There are a number of dimensions to consider.
 `showSolution`\
 The *Solution Visibility* grading setting.
 
+`givenUp`\
+Has the user given up on an item.
+
 `dueDate`\
 How the due date relates to the assignment attempt:
 - `none`: no due date
@@ -23,11 +26,11 @@ The *Apply Time Limit* grading setting.
 - `remaining`: user still within *time limit*, more attempts allowed
 - `expired`: *time limit* expired, no more attempts allowed
 
-`givenUp`\
-Has the user given up on an item.
+`shouldAnswerBeVisible`\
+Should the *Reveal Answer* menu item be available to the user.
 
 `notes`\
-Which ticket does this state relate to. Or, is it even possible.
+Which ticket does this state relate to, is it working, etc.
 
 # Results
 See [result.csv](./result.csv) for the table.
@@ -37,5 +40,6 @@ The result is already in version control, but if you make changes:
 
 ```bash
 yarn
-node index.js > result.csv
+yarn start
+cat result.csv
 ```
