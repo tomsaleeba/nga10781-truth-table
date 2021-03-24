@@ -1,40 +1,40 @@
 showSolution, dueDate, attemptCount, timeLimit, givenUp, notes
-question completion,none,none,remaining,no
-question completion,none,none,remaining,yes
-question completion,none,none,expired,no
-question completion,none,none,expired,yes
-question completion,none,some,remaining,no
-question completion,none,some,remaining,yes
-question completion,none,some,expired,no
-question completion,none,some,expired,yes
-question completion,none,max,remaining,no
-question completion,none,max,remaining,yes
-question completion,none,max,expired,no
-question completion,none,max,expired,yes
-question completion,in future,none,remaining,no
-question completion,in future,none,remaining,yes
-question completion,in future,none,expired,no
-question completion,in future,none,expired,yes
-question completion,in future,some,remaining,no
-question completion,in future,some,remaining,yes
-question completion,in future,some,expired,no
-question completion,in future,some,expired,yes
-question completion,in future,max,remaining,no
-question completion,in future,max,remaining,yes
-question completion,in future,max,expired,no
-question completion,in future,max,expired,yes
-question completion,in past,none,remaining,no
-question completion,in past,none,remaining,yes
-question completion,in past,none,expired,no
-question completion,in past,none,expired,yes
+question completion,none,none,remaining,no,
+question completion,none,none,remaining,yes,
+question completion,none,none,expired,no,
+question completion,none,none,expired,yes,
+question completion,none,some,remaining,no,
+question completion,none,some,remaining,yes,
+question completion,none,some,expired,no,
+question completion,none,some,expired,yes,
+question completion,none,max,remaining,no,
+question completion,none,max,remaining,yes,
+question completion,none,max,expired,no,
+question completion,none,max,expired,yes,
+question completion,in future,none,remaining,no,
+question completion,in future,none,remaining,yes,
+question completion,in future,none,expired,no,
+question completion,in future,none,expired,yes,
+question completion,in future,some,remaining,no,
+question completion,in future,some,remaining,yes,
+question completion,in future,some,expired,no,
+question completion,in future,some,expired,yes,
+question completion,in future,max,remaining,no,
+question completion,in future,max,remaining,yes,
+question completion,in future,max,expired,no,
+question completion,in future,max,expired,yes,
+question completion,in past,none,remaining,no,
+question completion,in past,none,remaining,yes,
+question completion,in past,none,expired,no,
+question completion,in past,none,expired,yes,
 question completion,in past,some,remaining,no,NGA-10781
 question completion,in past,some,remaining,yes,NGA-10781
 question completion,in past,some,expired,no,NGA-10781
 question completion,in past,some,expired,yes,NGA-10781
-question completion,in past,max,remaining,no
-question completion,in past,max,remaining,yes
-question completion,in past,max,expired,no
-question completion,in past,max,expired,yes
+question completion,in past,max,remaining,no,
+question completion,in past,max,remaining,yes,
+question completion,in past,max,expired,no,
+question completion,in past,max,expired,yes,
 after due date,none,none,remaining,no,Invalid - due date not configured
 after due date,none,none,remaining,yes,Invalid - due date not configured
 after due date,none,none,expired,no,Invalid - due date not configured

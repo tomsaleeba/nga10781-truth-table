@@ -43,7 +43,7 @@ for (const curr of result) {
     console.log(`${joined},NGA-10544`) // I think
     continue
   }
-  console.log(joined)
+  console.log(`${joined},`)
 }
 
 console.error(`Wrote ${result.length} lines`)
