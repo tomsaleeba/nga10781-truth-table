@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.product": "^18.9.19"
+  }
+}

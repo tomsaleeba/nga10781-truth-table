@@ -1,0 +1,73 @@
+showSolution, dueDate, attemptCount, timeLimit, givenUp, notes
+question completion,none,none,remaining,no
+question completion,none,none,remaining,yes
+question completion,none,none,expired,no
+question completion,none,none,expired,yes
+question completion,none,some,remaining,no
+question completion,none,some,remaining,yes
+question completion,none,some,expired,no
+question completion,none,some,expired,yes
+question completion,none,max,remaining,no
+question completion,none,max,remaining,yes
+question completion,none,max,expired,no
+question completion,none,max,expired,yes
+question completion,in future,none,remaining,no
+question completion,in future,none,remaining,yes
+question completion,in future,none,expired,no
+question completion,in future,none,expired,yes
+question completion,in future,some,remaining,no
+question completion,in future,some,remaining,yes
+question completion,in future,some,expired,no
+question completion,in future,some,expired,yes
+question completion,in future,max,remaining,no
+question completion,in future,max,remaining,yes
+question completion,in future,max,expired,no
+question completion,in future,max,expired,yes
+question completion,in past,none,remaining,no
+question completion,in past,none,remaining,yes
+question completion,in past,none,expired,no
+question completion,in past,none,expired,yes
+question completion,in past,some,remaining,no,NGA-10781
+question completion,in past,some,remaining,yes,NGA-10781
+question completion,in past,some,expired,no,NGA-10781
+question completion,in past,some,expired,yes,NGA-10781
+question completion,in past,max,remaining,no
+question completion,in past,max,remaining,yes
+question completion,in past,max,expired,no
+question completion,in past,max,expired,yes
+after due date,none,none,remaining,no,Invalid - due date not configured
+after due date,none,none,remaining,yes,Invalid - due date not configured
+after due date,none,none,expired,no,Invalid - due date not configured
+after due date,none,none,expired,yes,Invalid - due date not configured
+after due date,none,some,remaining,no,Invalid - due date not configured
+after due date,none,some,remaining,yes,Invalid - due date not configured
+after due date,none,some,expired,no,Invalid - due date not configured
+after due date,none,some,expired,yes,Invalid - due date not configured
+after due date,none,max,remaining,no,Invalid - due date not configured
+after due date,none,max,remaining,yes,Invalid - due date not configured
+after due date,none,max,expired,no,Invalid - due date not configured
+after due date,none,max,expired,yes,Invalid - due date not configured
+after due date,in future,none,remaining,no,Answers never shown!
+after due date,in future,none,remaining,yes,Answers never shown!
+after due date,in future,none,expired,no,Answers never shown!
+after due date,in future,none,expired,yes,Answers never shown!
+after due date,in future,some,remaining,no,Answers never shown!
+after due date,in future,some,remaining,yes,Answers never shown!
+after due date,in future,some,expired,no,Answers never shown!
+after due date,in future,some,expired,yes,Answers never shown!
+after due date,in future,max,remaining,no,Answers never shown!
+after due date,in future,max,remaining,yes,Answers never shown!
+after due date,in future,max,expired,no,Answers never shown!
+after due date,in future,max,expired,yes,Answers never shown!
+after due date,in past,none,remaining,no,NGA-10544
+after due date,in past,none,remaining,yes,NGA-10544
+after due date,in past,none,expired,no,NGA-10544
+after due date,in past,none,expired,yes,NGA-10544
+after due date,in past,some,remaining,no,NGA-10781
+after due date,in past,some,remaining,yes,NGA-10781
+after due date,in past,some,expired,no,NGA-10781
+after due date,in past,some,expired,yes,NGA-10781
+after due date,in past,max,remaining,no,NGA-10781
+after due date,in past,max,remaining,yes,NGA-10781
+after due date,in past,max,expired,no,NGA-10781
+after due date,in past,max,expired,yes,NGA-10781
