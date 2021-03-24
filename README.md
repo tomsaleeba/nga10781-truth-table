@@ -31,3 +31,11 @@ Which ticket does this state relate to. Or, is it even possible.
 
 # Results
 See [result.csv](./result.csv) for the table.
+
+# How to run
+The result is already in version control, but if you make changes:
+
+```bash
+yarn
+node index.js > result.csv
+```

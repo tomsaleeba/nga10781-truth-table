@@ -13,32 +13,45 @@ const result =
 
 console.log('showSolution, dueDate, attemptCount, timeLimit, givenUp, notes')
 for (const curr of result) {
-  const cond1 = curr[0] === 'question completion'
-                && curr[1] === 'in past'
-                && curr[2] === 'some'
-  const cond2 = curr[0] === 'after due date'
-                && curr[1] === 'in past'
-                && curr[2] !== 'none'
   const joined = _.join(curr, ',')
-  if (cond1 || cond2) {
+  const currShowSolution = curr[0]
+  const currDueDate = curr[1]
+  const currAttemptCount = curr[2]
+  // const currTimeLimit = curr[3]
+  const currGivenUp = curr[4]
+  const isNga10781 = (()=>{
+    const cond1 = currShowSolution === 'question completion'
+                  && currDueDate === 'in past'
+                  && currAttemptCount === 'some'
+    const cond2 = currShowSolution === 'after due date'
+                  && currDueDate === 'in past'
+                  && currAttemptCount !== 'none'
+    return cond1 || cond2
+  })()
+  if (isNga10781) {
     console.log(`${joined},NGA-10781`)
     continue
   }
-  if (curr[0] === 'after due date'
-                && curr[1] === 'in future') {
+  if (currShowSolution === 'question completion' &&
+      (currAttemptCount === 'max' || currGivenUp === 'yes')) {
+    console.log(`${joined},OK according to NGA-10781`)
+    continue
+  }
+  if (currShowSolution === 'after due date'
+                && currDueDate === 'in future') {
     console.log(`${joined},Answers never shown!`)
     continue
   }
-  if (curr[0] === 'after due date'
-                && curr[1] === 'none') {
+  if (currShowSolution === 'after due date'
+                && currDueDate === 'none') {
     console.log(`${joined},Invalid - due date not configured`)
     continue
   }
   if (
-      // FIXME not mentioned in ticket but assuming this as due date is mentioned
-      curr[0] === 'after due date'
-      && curr[1] === 'in past'
-      && curr[2] === 'none'
+      // FIXME not mentioned in ticket but assuming "after" as due date is mentioned
+      currShowSolution === 'after due date'
+      && currDueDate === 'in past'
+      && currAttemptCount === 'none'
   ) {
     console.log(`${joined},NGA-10544`) // I think
     continue
