@@ -7,6 +7,9 @@ and values mean. The first five columns are the "inputs" to the state, the
 remaining columns are the expectations, etc.
 
 # Dimensions
+Note: one dimension not yet captured here is `Grading Mode = Homework|Quiz`.
+This whole CSV currently assumes `Homework` mode, as that's what NGA-10781
+relates to.
 
 ## Inputs
 
