@@ -1,73 +1,73 @@
-showSolution, givenUp, dueDate, attemptCount, timeLimit, shouldAnswerBeVisible, notes
-question completion,no,in future,none,none, ?,
-question completion,no,in future,none,remaining, ?,
-question completion,no,in future,none,expired, ?,
-question completion,no,in future,some,none, ?,
-question completion,no,in future,some,remaining, ?,
-question completion,no,in future,some,expired, ?,
-question completion,no,in future,max,none, yes, OK according to NGA-10781
-question completion,no,in future,max,remaining, yes, OK according to NGA-10781
-question completion,no,in future,max,expired, yes, OK according to NGA-10781
-question completion,no,in past,none,none, ?,
-question completion,no,in past,none,remaining, ?,
-question completion,no,in past,none,expired, ?,
-question completion,no,in past,some,none, yes, NGA-10781
-question completion,no,in past,some,remaining, yes, NGA-10781
-question completion,no,in past,some,expired, yes, NGA-10781
-question completion,no,in past,max,none, yes, OK according to NGA-10781
-question completion,no,in past,max,remaining, yes, OK according to NGA-10781
-question completion,no,in past,max,expired, yes, OK according to NGA-10781
-question completion,yes,in future,none,none, yes, OK according to NGA-10781
-question completion,yes,in future,none,remaining, yes, OK according to NGA-10781
-question completion,yes,in future,none,expired, yes, OK according to NGA-10781
-question completion,yes,in future,some,none, yes, OK according to NGA-10781
-question completion,yes,in future,some,remaining, yes, OK according to NGA-10781
-question completion,yes,in future,some,expired, yes, OK according to NGA-10781
-question completion,yes,in future,max,none, yes, OK according to NGA-10781
-question completion,yes,in future,max,remaining, yes, OK according to NGA-10781
-question completion,yes,in future,max,expired, yes, OK according to NGA-10781
-question completion,yes,in past,none,none, yes, OK according to NGA-10781
-question completion,yes,in past,none,remaining, yes, OK according to NGA-10781
-question completion,yes,in past,none,expired, yes, OK according to NGA-10781
-question completion,yes,in past,some,none, yes, NGA-10781
-question completion,yes,in past,some,remaining, yes, NGA-10781
-question completion,yes,in past,some,expired, yes, NGA-10781
-question completion,yes,in past,max,none, yes, OK according to NGA-10781
-question completion,yes,in past,max,remaining, yes, OK according to NGA-10781
-question completion,yes,in past,max,expired, yes, OK according to NGA-10781
-after due date,no,in future,none,none, no,
-after due date,no,in future,none,remaining, no,
-after due date,no,in future,none,expired, no,
-after due date,no,in future,some,none, no,
-after due date,no,in future,some,remaining, no,
-after due date,no,in future,some,expired, no,
-after due date,no,in future,max,none, no,
-after due date,no,in future,max,remaining, no,
-after due date,no,in future,max,expired, no,
-after due date,no,in past,none,none, ?, NGA-10544
-after due date,no,in past,none,remaining, ?, NGA-10544
-after due date,no,in past,none,expired, ?, NGA-10544
-after due date,no,in past,some,none, yes, NGA-10781
-after due date,no,in past,some,remaining, yes, NGA-10781
-after due date,no,in past,some,expired, yes, NGA-10781
-after due date,no,in past,max,none, yes, NGA-10781
-after due date,no,in past,max,remaining, yes, NGA-10781
-after due date,no,in past,max,expired, yes, NGA-10781
-after due date,yes,in future,none,none, no,
-after due date,yes,in future,none,remaining, no,
-after due date,yes,in future,none,expired, no,
-after due date,yes,in future,some,none, no,
-after due date,yes,in future,some,remaining, no,
-after due date,yes,in future,some,expired, no,
-after due date,yes,in future,max,none, no,
-after due date,yes,in future,max,remaining, no,
-after due date,yes,in future,max,expired, no,
-after due date,yes,in past,none,none, ?, NGA-10544
-after due date,yes,in past,none,remaining, ?, NGA-10544
-after due date,yes,in past,none,expired, ?, NGA-10544
-after due date,yes,in past,some,none, yes, NGA-10781
-after due date,yes,in past,some,remaining, yes, NGA-10781
-after due date,yes,in past,some,expired, yes, NGA-10781
-after due date,yes,in past,max,none, yes, NGA-10781
-after due date,yes,in past,max,remaining, yes, NGA-10781
-after due date,yes,in past,max,expired, yes, NGA-10781
+showSolution, givenUp, dueDate, attemptCount, timeLimit, shouldAnswerBeVisible, isWorking, why
+question completion,no,in future,none,none, no, ?, not attempted or not due or no timer
+question completion,no,in future,none,remaining, no, ?, timer still running
+question completion,no,in future,none,expired, yes, ?, question is complete
+question completion,no,in future,some,none, no, ?, not attempted or not due or no timer
+question completion,no,in future,some,remaining, no, ?, timer still running
+question completion,no,in future,some,expired, yes, ?, question is complete
+question completion,no,in future,max,none, yes, ?, question is complete
+question completion,no,in future,max,remaining, yes, ?, question is complete
+question completion,no,in future,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,no,in past,none,none, yes, ?, question is complete
+question completion,no,in past,none,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,no,in past,none,expired, yes, ?, question is complete
+question completion,no,in past,some,none, yes, ?, question is complete
+question completion,no,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,no,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+question completion,no,in past,max,none, yes, ?, question is complete
+question completion,no,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,no,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,yes,in future,none,none, yes, ?, question is complete
+question completion,yes,in future,none,remaining, yes, ?, question is complete
+question completion,yes,in future,none,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,yes,in future,some,none, yes, ?, question is complete
+question completion,yes,in future,some,remaining, yes, ?, question is complete
+question completion,yes,in future,some,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,yes,in future,max,none, yes, ?, question is complete
+question completion,yes,in future,max,remaining, yes, ?, question is complete
+question completion,yes,in future,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,yes,in past,none,none, yes, ?, question is complete
+question completion,yes,in past,none,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,yes,in past,none,expired, yes, yes - according to NGA-10781, max attempts or given up
+question completion,yes,in past,some,none, yes, ?, question is complete
+question completion,yes,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,yes,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+question completion,yes,in past,max,none, yes, ?, question is complete
+question completion,yes,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
+question completion,yes,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+after due date,no,in future,none,none, no, ?, due date in future
+after due date,no,in future,none,remaining, no, ?, timer still running
+after due date,no,in future,none,expired, no, ?, due date in future
+after due date,no,in future,some,none, no, ?, due date in future
+after due date,no,in future,some,remaining, no, ?, timer still running
+after due date,no,in future,some,expired, no, ?, due date in future
+after due date,no,in future,max,none, no, ?, due date in future
+after due date,no,in future,max,remaining, no, ?, due date in future
+after due date,no,in future,max,expired, no, ?, due date in future
+after due date,no,in past,none,none, yes, no - is this NGA-10544?,
+after due date,no,in past,none,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,no,in past,none,expired, yes, no - is this NGA-10544?,
+after due date,no,in past,some,none, yes, ?, due date has passed
+after due date,no,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,no,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+after due date,no,in past,max,none, yes, ?, due date has passed
+after due date,no,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,no,in past,max,expired, yes, no, NGA-10781 - need to consider expired timer
+after due date,yes,in future,none,none, no, ?, due date in future
+after due date,yes,in future,none,remaining, no, ?, due date in future
+after due date,yes,in future,none,expired, no, ?, due date in future
+after due date,yes,in future,some,none, no, ?, due date in future
+after due date,yes,in future,some,remaining, no, ?, due date in future
+after due date,yes,in future,some,expired, no, ?, due date in future
+after due date,yes,in future,max,none, no, ?, due date in future
+after due date,yes,in future,max,remaining, no, ?, due date in future
+after due date,yes,in future,max,expired, no, ?, due date in future
+after due date,yes,in past,none,none, yes, no - is this NGA-10544?,
+after due date,yes,in past,none,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,yes,in past,none,expired, yes, no - is this NGA-10544?,
+after due date,yes,in past,some,none, yes, ?, due date has passed
+after due date,yes,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,yes,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+after due date,yes,in past,max,none, yes, ?, due date has passed
+after due date,yes,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
+after due date,yes,in past,max,expired, yes, no, NGA-10781 - need to consider expired timer

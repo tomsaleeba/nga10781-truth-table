@@ -1,7 +1,14 @@
 While trying to solve NGA-10781, I needed to understand all the possible states
 the app can be in. There are a number of dimensions to consider.
 
+# Results
+See [result.csv](./result.csv) for the table. Read below for what the columns
+and values mean. The first five columns are the "inputs" to the state, the
+remaining columns are the expectations, etc.
+
 # Dimensions
+
+## Inputs
 
 `showSolution`\
 The *Solution Visibility* grading setting.
@@ -11,35 +18,46 @@ Has the user given up on an item.
 
 `dueDate`\
 How the due date relates to the assignment attempt:
-- `none`: no due date
-- `in future`: assignment is still open
-- `in past`: assignment is closed
+- `in future`: assignment is still open, due date is in the future
+- `in past`: assignment is closed, due date is in the past
 
 `attemptCount`\
 How many attempts at an item has the user made:
-- `none`: no attempts
-- `some`: at least one made and at least one remaining
-- `max`: all attempts used, no more allowed
+- `none`: user has made 0 attempts
+- `some`: at least one attempt made and at least one remaining
+- `max`: no more allowed as the *Attempts per question* limit has been reached
 
 `timeLimit`\
 The *Apply Time Limit* grading setting.
 - `remaining`: user still within *time limit*, more attempts allowed
 - `expired`: *time limit* expired, no more attempts allowed
 
+## Outputs
+
 `shouldAnswerBeVisible`\
 Should the *Reveal Answer* menu item be available to the user.
 
-`notes`\
-Which ticket does this state relate to, is it working, etc.
+`isWorking`\
+Is this working correct in `assess`? Possibly not all that useful unless it's
+used a checklist to make sure we have test coverage. For some states, we have
+tickets saying they are/aren't working and I wanted to note that.
 
-# Results
-See [result.csv](./result.csv) for the table.
+`why`\
+A reason for the `shouldAnswerBeVisible` value.
 
 # How to run
-The result is already in version control, but if you make changes:
+The result (`result.csv`) is already in version control, but if you make
+changes, re-run with:
 
 ```bash
 yarn
 yarn start
 cat result.csv
 ```
+
+# Questions
+- What happens when a timer would run past the end date? Is the timer cut short
+  when it starts or does it get killed when the due date arrives. The
+  assumption is that a timer *cannot* run past the due date.
+- Does this correctly capture the states that NGA-10781 is addressing?
+- Is it correct that every assignment *must* have a due date?
