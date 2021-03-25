@@ -4,7 +4,7 @@ const _ = require('lodash')
 const dimensions = {
   // TODO homework/quiz dimension not captured
   showSolution: [ 'question completion', 'after due date' ],
-  dueDate: [ 'in future', 'in past' ],
+  dueDate: [ 'in future/none', 'in past' ],
   attemptCount: [ 'none', 'some', 'max' ],
   timeLimit: [ 'none', 'remaining', 'expired' ],
   givenUp: [ 'no', 'yes' ],
@@ -31,23 +31,28 @@ for (const curr of result) {
   const currDueDate = curr[getHeaderIndex('dueDate')]
   const currAttemptCount = curr[getHeaderIndex('attemptCount')]
   const currTimeLimit = curr[getHeaderIndex('timeLimit')]
-  if (currTimeLimit === 'remaining' && currDueDate === 'in future'
+  if (currTimeLimit === 'remaining' && currDueDate === 'in future/none'
       && currGivenUp === 'no' && currAttemptCount !== 'max') {
     console.log(`${joined}, no, ?, timer still running`)
     continue
   }
   if (currTimeLimit === 'remaining' && currDueDate === 'in past') {
-    console.log(`${joined}, yes, ?, impossible - timer cannot run past due date?`)
+    console.log(`${joined}, -, ?, impossible - timer cannot run past due date?`)
     continue
   }
   if (currShowSolution === 'after due date'
-                && currDueDate === 'in future') {
-    console.log(`${joined}, no, ?, due date in future`)
+                && currDueDate === 'in future/none') {
+    console.log(`${joined}, no, ?, no due date or in future`)
+    continue
+  }
+  if (currShowSolution === 'question completion'
+                && currDueDate === 'in past'
+                && currAttemptCount === 'none') {
+    console.log(`${joined}, no, yes, didn't even try`)
     continue
   }
   const isNga10781 = (()=>{
-    const common = currDueDate === 'in past'
-                  && currTimeLimit === 'expired'
+    const common = currTimeLimit === 'expired'
                   && currGivenUp === 'no'
     const cond1 = currShowSolution === 'question completion'
                   && currAttemptCount === 'some'
@@ -56,7 +61,11 @@ for (const curr of result) {
     return common && (cond1 || cond2)
   })()
   if (isNga10781) {
-    console.log(`${joined}, yes, no, NGA-10781 - need to consider expired timer`)
+    // FIXME the ticket is unclear if NGA-10781 only applies after the due date
+    // has passed, but I think it also applies to an expired timer *before* the
+    // due date has passed.
+    const ambiguity = currDueDate === 'in future/none' ? '?' : ''
+    console.log(`${joined}, yes${ambiguity}, no, NGA-10781 - need to consider expired timer`)
     continue
   }
   if (currShowSolution === 'question completion' &&

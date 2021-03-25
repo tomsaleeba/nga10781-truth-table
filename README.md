@@ -18,7 +18,8 @@ Has the user given up on an item.
 
 `dueDate`\
 How the due date relates to the assignment attempt:
-- `in future`: assignment is still open, due date is in the future
+- `in future/none`: assignment is still open, due date is in the future or
+  there is no due date
 - `in past`: assignment is closed, due date is in the past
 
 `attemptCount`\
@@ -61,4 +62,6 @@ cat result.csv
   assumption is that a timer *cannot* run past the due date.
 - Does this correctly capture the states that NGA-10781 is addressing?
 - Is NGA-10781 only about "after due date" as the ticket mentions?
-- Is it correct that every assignment *must* have a due date?
+- Should "missed" (unattempted) questions show the answer when "complete"?
+- For "due date", is it safe to assume that "none" === "in future"? At a code
+  level, it might matter as we have `{"dueDate":"0"...`
