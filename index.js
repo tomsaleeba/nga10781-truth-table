@@ -48,6 +48,7 @@ for (const curr of result) {
   const isNga10781 = (()=>{
     const common = currDueDate === 'in past'
                   && currTimeLimit === 'expired'
+                  && currGivenUp === 'no'
     const cond1 = currShowSolution === 'question completion'
                   && currAttemptCount === 'some'
     const cond2 = currShowSolution === 'after due date'

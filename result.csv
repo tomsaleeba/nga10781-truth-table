@@ -31,7 +31,7 @@ question completion,yes,in past,none,remaining, yes, ?, impossible - timer canno
 question completion,yes,in past,none,expired, yes, yes - according to NGA-10781, max attempts or given up
 question completion,yes,in past,some,none, yes, ?, question is complete
 question completion,yes,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
-question completion,yes,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+question completion,yes,in past,some,expired, yes, yes - according to NGA-10781, max attempts or given up
 question completion,yes,in past,max,none, yes, ?, question is complete
 question completion,yes,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
 question completion,yes,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
@@ -67,7 +67,7 @@ after due date,yes,in past,none,remaining, yes, ?, impossible - timer cannot run
 after due date,yes,in past,none,expired, yes, no - is this NGA-10544?,
 after due date,yes,in past,some,none, yes, ?, due date has passed
 after due date,yes,in past,some,remaining, yes, ?, impossible - timer cannot run past due date?
-after due date,yes,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+after due date,yes,in past,some,expired, yes, ?, due date has passed
 after due date,yes,in past,max,none, yes, ?, due date has passed
 after due date,yes,in past,max,remaining, yes, ?, impossible - timer cannot run past due date?
-after due date,yes,in past,max,expired, yes, no, NGA-10781 - need to consider expired timer
+after due date,yes,in past,max,expired, yes, ?, due date has passed

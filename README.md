@@ -60,4 +60,5 @@ cat result.csv
   when it starts or does it get killed when the due date arrives. The
   assumption is that a timer *cannot* run past the due date.
 - Does this correctly capture the states that NGA-10781 is addressing?
+- Is NGA-10781 only about "after due date" as the ticket mentions?
 - Is it correct that every assignment *must* have a due date?
