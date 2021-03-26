@@ -59,12 +59,18 @@ yarn start
 cat result.csv
 ```
 
-# Questions
-- What happens when a timer would run past the end date? Is the timer cut short
-  when it starts or does it get killed when the due date arrives. The
-  assumption is that a timer *cannot* run past the due date.
+# Open questions
 - Does this correctly capture the states that NGA-10781 is addressing?
-- Is NGA-10781 only about "after due date" as the ticket mentions?
 - Should "missed" (unattempted) questions show the answer when "complete"?
 - For "due date", is it safe to assume that "none" === "in future"? At a code
   level, it might matter as we have `{"dueDate":"0"...`
+- do we need to be worried about `falcon.lms_user_assignment_policy.additional_time`?
+
+# Answered questions
+- Is NGA-10781 only about "after due date" as the ticket mentions?\
+  *A:* No, that was just assumed.
+- What happens when a timer would run past the end date? Is the timer cut short
+  when it starts or does it get killed when the due date arrives. The
+  assumption is that a timer *cannot* run past the due date.\
+  *A:* It get's cut short as you can see in `slapi.assignment_time_remaining.sql:48`
+  and `slapi.assignment_time_remaining.sql:62`.
