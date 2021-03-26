@@ -3,15 +3,17 @@ the app can be in. There are a number of dimensions to consider.
 
 # Results
 See [result.csv](./result.csv) for the table. Read below for what the columns
-and values mean. The first five columns are the "inputs" to the state, the
+and values mean. The first six columns are the "inputs" to the state, the
 remaining columns are the expectations, etc.
 
 # Dimensions
-Note: one dimension not yet captured here is `Grading Mode = Homework|Quiz`.
-This whole CSV currently assumes `Homework` mode, as that's what NGA-10781
-relates to.
+This CSV only shows `gradingMode = homework`, as that's what NGA-10781 relates
+to.
 
 ## Inputs
+
+`gradingMode`\
+The *Grading Mode* grading setting.
 
 `showSolution`\
 The *Solution Visibility* grading setting.

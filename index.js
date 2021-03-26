@@ -2,15 +2,22 @@ require('lodash.product')
 const _ = require('lodash')
 
 const dimensions = {
-  // TODO homework/quiz dimension not captured
-  showSolution: [ 'question completion', 'after due date' ],
+  gradingMode: [ 'homework', /*'quiz'*/ ], // FIXME not yet handling quiz mode
+  showSolution: [
+    'question completion',
+    // FIXME when in "quiz" mode, completion is slightly different. Either need
+    // to use this second value, or just change this value to "completion" and
+    // understand it has different meaning based on gradingMode.
+    // 'assignment completion',
+    'after due date'
+  ],
   dueDate: [ 'in future/none', 'in past' ],
   attemptCount: [ 'none', 'some', 'max' ],
   timeLimit: [ 'none', 'remaining', 'expired' ],
   givenUp: [ 'no', 'yes' ],
 }
 
-const header = 'showSolution, givenUp, dueDate, attemptCount, timeLimit'
+const header = 'gradingMode, showSolution, givenUp, dueDate, attemptCount, timeLimit'
 const splitHeaders = header.split(', ')
 const getHeaderIndex = key => splitHeaders.findIndex(k => k === key)
 const headerValues = splitHeaders.map(key=> {
@@ -61,11 +68,7 @@ for (const curr of result) {
     return common && (cond1 || cond2)
   })()
   if (isNga10781) {
-    // FIXME the ticket is unclear if NGA-10781 only applies after the due date
-    // has passed, but I think it also applies to an expired timer *before* the
-    // due date has passed.
-    const ambiguity = currDueDate === 'in future/none' ? '?' : ''
-    console.log(`${joined}, yes${ambiguity}, no, NGA-10781 - need to consider expired timer`)
+    console.log(`${joined}, yes, no, NGA-10781 - need to consider expired timer`)
     continue
   }
   if (currShowSolution === 'question completion' &&
