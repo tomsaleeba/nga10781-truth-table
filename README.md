@@ -7,15 +7,12 @@ and values mean. The first six columns are the "inputs" to the state, the
 remaining columns are the expectations, etc.
 
 # Dimensions
-This CSV only shows `gradingMode = homework`, as that's what NGA-10781 relates
-to.
-
 ## Inputs
 
 `gradingMode`\
 The *Grading Mode* grading setting.
 
-`showSolution`\
+`solutionVisibility`\
 The *Solution Visibility* grading setting.
 
 `givenUp`\

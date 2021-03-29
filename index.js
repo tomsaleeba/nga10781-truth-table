@@ -2,13 +2,12 @@ require('lodash.product')
 const _ = require('lodash')
 
 const dimensions = {
-  gradingMode: [ 'homework', /*'quiz'*/ ], // FIXME not yet handling quiz mode
-  showSolution: [
-    'question completion',
-    // FIXME when in "quiz" mode, completion is slightly different. Either need
-    // to use this second value, or just change this value to "completion" and
-    // understand it has different meaning based on gradingMode.
-    // 'assignment completion',
+  gradingMode: [ 'homework', 'quiz' ],
+  solutionVisibility: [
+    // completion meaning depends on context:
+    //   gradingMode=homework; upon question completion
+    //   gradingMode=quiz; upon assignment completion
+    'upon completion',
     'after due date'
   ],
   dueDate: [ 'in future/none', 'in past' ],
@@ -17,7 +16,7 @@ const dimensions = {
   givenUp: [ 'no', 'yes' ],
 }
 
-const header = 'gradingMode, showSolution, givenUp, dueDate, attemptCount, timeLimit'
+const header = 'gradingMode, solutionVisibility, givenUp, dueDate, attemptCount, timeLimit'
 const splitHeaders = header.split(', ')
 const getHeaderIndex = key => splitHeaders.findIndex(k => k === key)
 const headerValues = splitHeaders.map(key=> {
@@ -33,11 +32,16 @@ console.log(`${header}, shouldAnswerBeVisible, isWorking, why`)
 
 for (const curr of result) {
   const joined = _.join(curr, ',')
-  const currShowSolution = curr[getHeaderIndex('showSolution')]
+  const currGradingMode = curr[getHeaderIndex('gradingMode')]
+  const currSolVis = curr[getHeaderIndex('solutionVisibility')]
   const currGivenUp = curr[getHeaderIndex('givenUp')]
   const currDueDate = curr[getHeaderIndex('dueDate')]
   const currAttemptCount = curr[getHeaderIndex('attemptCount')]
   const currTimeLimit = curr[getHeaderIndex('timeLimit')]
+  if (currGradingMode === 'quiz') {
+    console.log(`${joined}, ?, ?, ?`)
+    continue
+  }
   if (currTimeLimit === 'remaining' && currDueDate === 'in future/none'
       && currGivenUp === 'no' && currAttemptCount !== 'max') {
     console.log(`${joined}, no, ?, timer still running`)
@@ -47,12 +51,12 @@ for (const curr of result) {
     console.log(`${joined}, -, ?, impossible - timer cannot run past due date?`)
     continue
   }
-  if (currShowSolution === 'after due date'
+  if (currSolVis === 'after due date'
                 && currDueDate === 'in future/none') {
     console.log(`${joined}, no, ?, no due date or in future`)
     continue
   }
-  if (currShowSolution === 'question completion'
+  if (currSolVis === 'upon completion'
                 && currDueDate === 'in past'
                 && currAttemptCount === 'none') {
     console.log(`${joined}, no, yes, didn't even try`)
@@ -61,9 +65,9 @@ for (const curr of result) {
   const isNga10781 = (()=>{
     const common = currTimeLimit === 'expired'
                   && currGivenUp === 'no'
-    const cond1 = currShowSolution === 'question completion'
+    const cond1 = currSolVis === 'upon completion'
                   && currAttemptCount === 'some'
-    const cond2 = currShowSolution === 'after due date'
+    const cond2 = currSolVis === 'after due date'
                   && currAttemptCount !== 'none'
     return common && (cond1 || cond2)
   })()
@@ -71,7 +75,7 @@ for (const curr of result) {
     console.log(`${joined}, yes, no, NGA-10781 - need to consider expired timer`)
     continue
   }
-  if (currShowSolution === 'question completion' &&
+  if (currSolVis === 'upon completion' &&
       currTimeLimit === 'expired' &&
       (currAttemptCount === 'max' || currGivenUp === 'yes')) {
     // "(Properly working: exhausted attempts; given up question)"
@@ -80,14 +84,14 @@ for (const curr of result) {
   }
   if (
       // FIXME ticket doesn't specify but assuming "after" as due date is mentioned
-      currShowSolution === 'after due date'
+      currSolVis === 'after due date'
       && currDueDate === 'in past'
       && currAttemptCount === 'none'
   ) {
     console.log(`${joined}, yes, no - is this NGA-10544?,`) // I think
     continue
   }
-  const isQuestionComplete = currShowSolution === 'question completion'
+  const isQuestionComplete = currSolVis === 'upon completion'
       && (
         currGivenUp === 'yes'
         || currDueDate === 'in past'
@@ -98,7 +102,7 @@ for (const curr of result) {
     console.log(`${joined}, yes, ?, question is complete`)
     continue
   }
-  const isQuestionPastDue = currShowSolution === 'after due date'
+  const isQuestionPastDue = currSolVis === 'after due date'
       && currDueDate === 'in past'
   if (isQuestionPastDue) {
     console.log(`${joined}, yes, ?, due date has passed`)

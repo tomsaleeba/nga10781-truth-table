@@ -1,40 +1,40 @@
-gradingMode, showSolution, givenUp, dueDate, attemptCount, timeLimit, shouldAnswerBeVisible, isWorking, why
-homework,question completion,no,in future/none,none,none, no, ?, not attempted or not due or no timer
-homework,question completion,no,in future/none,none,remaining, no, ?, timer still running
-homework,question completion,no,in future/none,none,expired, yes, ?, question is complete
-homework,question completion,no,in future/none,some,none, no, ?, not attempted or not due or no timer
-homework,question completion,no,in future/none,some,remaining, no, ?, timer still running
-homework,question completion,no,in future/none,some,expired, yes, no, NGA-10781 - need to consider expired timer
-homework,question completion,no,in future/none,max,none, yes, ?, question is complete
-homework,question completion,no,in future/none,max,remaining, yes, ?, question is complete
-homework,question completion,no,in future/none,max,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,no,in past,none,none, no, yes, didn't even try
-homework,question completion,no,in past,none,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,no,in past,none,expired, no, yes, didn't even try
-homework,question completion,no,in past,some,none, yes, ?, question is complete
-homework,question completion,no,in past,some,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,no,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
-homework,question completion,no,in past,max,none, yes, ?, question is complete
-homework,question completion,no,in past,max,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,no,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,yes,in future/none,none,none, yes, ?, question is complete
-homework,question completion,yes,in future/none,none,remaining, yes, ?, question is complete
-homework,question completion,yes,in future/none,none,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,yes,in future/none,some,none, yes, ?, question is complete
-homework,question completion,yes,in future/none,some,remaining, yes, ?, question is complete
-homework,question completion,yes,in future/none,some,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,yes,in future/none,max,none, yes, ?, question is complete
-homework,question completion,yes,in future/none,max,remaining, yes, ?, question is complete
-homework,question completion,yes,in future/none,max,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,yes,in past,none,none, no, yes, didn't even try
-homework,question completion,yes,in past,none,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,yes,in past,none,expired, no, yes, didn't even try
-homework,question completion,yes,in past,some,none, yes, ?, question is complete
-homework,question completion,yes,in past,some,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,yes,in past,some,expired, yes, yes - according to NGA-10781, max attempts or given up
-homework,question completion,yes,in past,max,none, yes, ?, question is complete
-homework,question completion,yes,in past,max,remaining, -, ?, impossible - timer cannot run past due date?
-homework,question completion,yes,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+gradingMode, solutionVisibility, givenUp, dueDate, attemptCount, timeLimit, shouldAnswerBeVisible, isWorking, why
+homework,upon completion,no,in future/none,none,none, no, ?, not attempted or not due or no timer
+homework,upon completion,no,in future/none,none,remaining, no, ?, timer still running
+homework,upon completion,no,in future/none,none,expired, yes, ?, question is complete
+homework,upon completion,no,in future/none,some,none, no, ?, not attempted or not due or no timer
+homework,upon completion,no,in future/none,some,remaining, no, ?, timer still running
+homework,upon completion,no,in future/none,some,expired, yes, no, NGA-10781 - need to consider expired timer
+homework,upon completion,no,in future/none,max,none, yes, ?, question is complete
+homework,upon completion,no,in future/none,max,remaining, yes, ?, question is complete
+homework,upon completion,no,in future/none,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,no,in past,none,none, no, yes, didn't even try
+homework,upon completion,no,in past,none,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,no,in past,none,expired, no, yes, didn't even try
+homework,upon completion,no,in past,some,none, yes, ?, question is complete
+homework,upon completion,no,in past,some,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,no,in past,some,expired, yes, no, NGA-10781 - need to consider expired timer
+homework,upon completion,no,in past,max,none, yes, ?, question is complete
+homework,upon completion,no,in past,max,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,no,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,yes,in future/none,none,none, yes, ?, question is complete
+homework,upon completion,yes,in future/none,none,remaining, yes, ?, question is complete
+homework,upon completion,yes,in future/none,none,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,yes,in future/none,some,none, yes, ?, question is complete
+homework,upon completion,yes,in future/none,some,remaining, yes, ?, question is complete
+homework,upon completion,yes,in future/none,some,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,yes,in future/none,max,none, yes, ?, question is complete
+homework,upon completion,yes,in future/none,max,remaining, yes, ?, question is complete
+homework,upon completion,yes,in future/none,max,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,yes,in past,none,none, no, yes, didn't even try
+homework,upon completion,yes,in past,none,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,yes,in past,none,expired, no, yes, didn't even try
+homework,upon completion,yes,in past,some,none, yes, ?, question is complete
+homework,upon completion,yes,in past,some,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,yes,in past,some,expired, yes, yes - according to NGA-10781, max attempts or given up
+homework,upon completion,yes,in past,max,none, yes, ?, question is complete
+homework,upon completion,yes,in past,max,remaining, -, ?, impossible - timer cannot run past due date?
+homework,upon completion,yes,in past,max,expired, yes, yes - according to NGA-10781, max attempts or given up
 homework,after due date,no,in future/none,none,none, no, ?, no due date or in future
 homework,after due date,no,in future/none,none,remaining, no, ?, timer still running
 homework,after due date,no,in future/none,none,expired, no, ?, no due date or in future
@@ -71,3 +71,75 @@ homework,after due date,yes,in past,some,expired, yes, ?, due date has passed
 homework,after due date,yes,in past,max,none, yes, ?, due date has passed
 homework,after due date,yes,in past,max,remaining, -, ?, impossible - timer cannot run past due date?
 homework,after due date,yes,in past,max,expired, yes, ?, due date has passed
+quiz,upon completion,no,in future/none,none,none, ?, ?, ?
+quiz,upon completion,no,in future/none,none,remaining, ?, ?, ?
+quiz,upon completion,no,in future/none,none,expired, ?, ?, ?
+quiz,upon completion,no,in future/none,some,none, ?, ?, ?
+quiz,upon completion,no,in future/none,some,remaining, ?, ?, ?
+quiz,upon completion,no,in future/none,some,expired, ?, ?, ?
+quiz,upon completion,no,in future/none,max,none, ?, ?, ?
+quiz,upon completion,no,in future/none,max,remaining, ?, ?, ?
+quiz,upon completion,no,in future/none,max,expired, ?, ?, ?
+quiz,upon completion,no,in past,none,none, ?, ?, ?
+quiz,upon completion,no,in past,none,remaining, ?, ?, ?
+quiz,upon completion,no,in past,none,expired, ?, ?, ?
+quiz,upon completion,no,in past,some,none, ?, ?, ?
+quiz,upon completion,no,in past,some,remaining, ?, ?, ?
+quiz,upon completion,no,in past,some,expired, ?, ?, ?
+quiz,upon completion,no,in past,max,none, ?, ?, ?
+quiz,upon completion,no,in past,max,remaining, ?, ?, ?
+quiz,upon completion,no,in past,max,expired, ?, ?, ?
+quiz,upon completion,yes,in future/none,none,none, ?, ?, ?
+quiz,upon completion,yes,in future/none,none,remaining, ?, ?, ?
+quiz,upon completion,yes,in future/none,none,expired, ?, ?, ?
+quiz,upon completion,yes,in future/none,some,none, ?, ?, ?
+quiz,upon completion,yes,in future/none,some,remaining, ?, ?, ?
+quiz,upon completion,yes,in future/none,some,expired, ?, ?, ?
+quiz,upon completion,yes,in future/none,max,none, ?, ?, ?
+quiz,upon completion,yes,in future/none,max,remaining, ?, ?, ?
+quiz,upon completion,yes,in future/none,max,expired, ?, ?, ?
+quiz,upon completion,yes,in past,none,none, ?, ?, ?
+quiz,upon completion,yes,in past,none,remaining, ?, ?, ?
+quiz,upon completion,yes,in past,none,expired, ?, ?, ?
+quiz,upon completion,yes,in past,some,none, ?, ?, ?
+quiz,upon completion,yes,in past,some,remaining, ?, ?, ?
+quiz,upon completion,yes,in past,some,expired, ?, ?, ?
+quiz,upon completion,yes,in past,max,none, ?, ?, ?
+quiz,upon completion,yes,in past,max,remaining, ?, ?, ?
+quiz,upon completion,yes,in past,max,expired, ?, ?, ?
+quiz,after due date,no,in future/none,none,none, ?, ?, ?
+quiz,after due date,no,in future/none,none,remaining, ?, ?, ?
+quiz,after due date,no,in future/none,none,expired, ?, ?, ?
+quiz,after due date,no,in future/none,some,none, ?, ?, ?
+quiz,after due date,no,in future/none,some,remaining, ?, ?, ?
+quiz,after due date,no,in future/none,some,expired, ?, ?, ?
+quiz,after due date,no,in future/none,max,none, ?, ?, ?
+quiz,after due date,no,in future/none,max,remaining, ?, ?, ?
+quiz,after due date,no,in future/none,max,expired, ?, ?, ?
+quiz,after due date,no,in past,none,none, ?, ?, ?
+quiz,after due date,no,in past,none,remaining, ?, ?, ?
+quiz,after due date,no,in past,none,expired, ?, ?, ?
+quiz,after due date,no,in past,some,none, ?, ?, ?
+quiz,after due date,no,in past,some,remaining, ?, ?, ?
+quiz,after due date,no,in past,some,expired, ?, ?, ?
+quiz,after due date,no,in past,max,none, ?, ?, ?
+quiz,after due date,no,in past,max,remaining, ?, ?, ?
+quiz,after due date,no,in past,max,expired, ?, ?, ?
+quiz,after due date,yes,in future/none,none,none, ?, ?, ?
+quiz,after due date,yes,in future/none,none,remaining, ?, ?, ?
+quiz,after due date,yes,in future/none,none,expired, ?, ?, ?
+quiz,after due date,yes,in future/none,some,none, ?, ?, ?
+quiz,after due date,yes,in future/none,some,remaining, ?, ?, ?
+quiz,after due date,yes,in future/none,some,expired, ?, ?, ?
+quiz,after due date,yes,in future/none,max,none, ?, ?, ?
+quiz,after due date,yes,in future/none,max,remaining, ?, ?, ?
+quiz,after due date,yes,in future/none,max,expired, ?, ?, ?
+quiz,after due date,yes,in past,none,none, ?, ?, ?
+quiz,after due date,yes,in past,none,remaining, ?, ?, ?
+quiz,after due date,yes,in past,none,expired, ?, ?, ?
+quiz,after due date,yes,in past,some,none, ?, ?, ?
+quiz,after due date,yes,in past,some,remaining, ?, ?, ?
+quiz,after due date,yes,in past,some,expired, ?, ?, ?
+quiz,after due date,yes,in past,max,none, ?, ?, ?
+quiz,after due date,yes,in past,max,remaining, ?, ?, ?
+quiz,after due date,yes,in past,max,expired, ?, ?, ?
