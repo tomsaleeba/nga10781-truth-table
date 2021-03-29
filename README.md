@@ -41,7 +41,7 @@ The *Apply Time Limit* grading setting.
 Should the *Reveal Answer* menu item be available to the user.
 
 `isWorking`\
-Is this working correct in `assess`? Possibly not all that useful unless it's
+Is this working correctly in `assess`? Possibly not all that useful unless it's
 used a checklist to make sure we have test coverage. For some states, we have
 tickets saying they are/aren't working and I wanted to note that.
 
